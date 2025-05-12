@@ -1,0 +1,1 @@
+           noe                                                   move_in_direction(self, thedir, thespeed)
