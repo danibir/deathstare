@@ -1,5 +1,7 @@
 global.shadowlist = []
 
+instance_create_layer(x, y, "Engines", obj_dictionary)
+
 callid = 0
 cameraid = 0
 

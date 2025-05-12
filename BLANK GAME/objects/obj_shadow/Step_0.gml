@@ -9,7 +9,7 @@ else
 {
 	image_xscale /= sprite_width
 	image_yscale /= sprite_height
-	/*if host.sprite_index != -1
+	if host.sprite_index != -1
 	{
 	image_xscale *= host.sprite_width * 2/3
 	image_yscale *= host.sprite_height / 3
