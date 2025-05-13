@@ -1,4 +1,5 @@
-if other.state = "pointer" and other.liveinput.mb_leftpress
+
+if other.state = "pointer"// and (other.liveinput.mb_leftpress)
 {
 	if output = "start"
 	{

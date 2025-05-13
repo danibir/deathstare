@@ -1,5 +1,6 @@
 
 host.move = false
+if host.liveinput != -4
 if host.state = "fight"
 {
 	var input = host.liveinput
@@ -53,5 +54,5 @@ if host.state = "fight"
 	}
 //*/
 }
-if fps != 0
-normalattackcooldown -= 1 / fps
+
+normalattackcooldown -= global.time / 60

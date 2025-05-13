@@ -1,5 +1,4 @@
-if stop = false
-{
+
 liveinput = rollback_get_input();
 
 xspeed *= decel
@@ -27,9 +26,9 @@ if state = "pointer"
 	y = liveinput.mb_y
 }
 
-x += xspeed * 1/fps
-y += yspeed * 1/fps
-}
+x += xspeed * 1 * global.time
+y += yspeed * 1 * global.time  
+
 if x < 0 + border
 	x = 0 + border
 if x > room_width - border

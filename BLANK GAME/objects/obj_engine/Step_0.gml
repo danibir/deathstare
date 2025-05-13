@@ -1,3 +1,8 @@
+if fps != 0
+global.time = 60 / fps
+else
+global.time = 0
+
 with all
 {
 	if asset_has_tags(object_index, "hasShadow") and not array_contains(global.shadowlist, self)

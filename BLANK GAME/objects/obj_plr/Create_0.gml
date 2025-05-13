@@ -32,10 +32,11 @@ stats.host = self
 hitbox = instance_create_layer(x, y, "Engines", obj_hitbox)
 hitbox.host = self
 
+sprite = instance_create_layer(x, y, "Instances", obj_plrsprite)
+sprite.host = self
+
 tools = instance_create_layer(x, y, "Engines", obj_plrtools)
 tools.host = self
 
-sprite = instance_create_layer(x, y, "Instances", obj_plrsprite)
-sprite.host = self
 
 //sprite.visible = false
