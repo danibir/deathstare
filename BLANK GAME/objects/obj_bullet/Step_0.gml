@@ -1,5 +1,5 @@
 if fps != 0
-move_in_direction(self, thedirection, thespeed * global.time)
+move_in_direction(self, thedirection, thespeed)
 image_angle = 360 - thedirection mod 360
 
 image_xscale = sqrt(damage)

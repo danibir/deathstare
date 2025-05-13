@@ -13,6 +13,5 @@ for (var i = 0; i < array_length(playerlist); i++)
 	plr.y = room_height / 2
 	move_in_direction(plr, thedir, length)
 	thedir += 360 / array_length(playerlist)
-	plr.hitbox.hp = 3
-	plr.hitbox.host.state = "fight"
+	plr.state = "fight"
 }

@@ -26,6 +26,8 @@ liveinput = noone
 state = "pointer"
 pointer = noone
 
+/*
+
 stats = instance_create_layer(x, y, "Engines", obj_plrstats)
 stats.host = self
 

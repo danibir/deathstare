@@ -43,15 +43,15 @@ if host.state = "fight"
 			mul = 0.7
 		host.yspeed += host.speedstat / 1.5 * host.startaccel
 	}
-	if input.mb_leftpress and normalattackcooldown < 0
-	{
-		var bullet = instance_create_layer(host.x, host.y - host.size * 16, "Instances", obj_bullet)
-		bullet.thedirection = 360 - host.pointer.image_angle
-		bullet.damage = host.stats.strengthstat
-		bullet.thespeed = host.stats.shotspeedstat
-		bullet.range = host.stats.rangestat
-		normalattackcooldown = 1 / host.stats.attackspeedstat
-	}
+	//if input.mb_leftpress and normalattackcooldown < 0
+	//{
+	//	var bullet = instance_create_layer(host.x, host.y - host.size * 16, "Instances", obj_bullet)
+	//	bullet.thedirection = 360 - host.pointer.image_angle
+	//	bullet.damage = host.stats.strengthstat
+	//	bullet.thespeed = host.stats.shotspeedstat
+	//	bullet.range = host.stats.rangestat
+	//	normalattackcooldown = 1 / host.stats.attackspeedstat
+	//}
 //*/
 }
 
