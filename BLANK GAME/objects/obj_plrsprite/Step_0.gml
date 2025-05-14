@@ -11,18 +11,18 @@ if host != noone
 		stepside *= -1
 	}
 	step -= 1/5
-	var xspeed = 1 + sqrt(abs(host.xspeed)) / (host.speedstat * 12)
-	var yspeed = 1 + sqrt(abs(host.yspeed)) / (host.speedstat * 12)
+	var xspeed = 1 + sqrt(abs(host.xspeed)) / (host.stats.stat_speed * 12)
+	var yspeed = 1 + sqrt(abs(host.yspeed)) / (host.stats.stat_speed * 12)
 	var aspeed = (xspeed + yspeed) / 2
 	if host.yspeed >= 0
 	{
-	image_xscale = 1 / yspeed * host.size 
-	image_yscale = 1 * yspeed * host.size 
+	image_xscale = 1 / yspeed * host.stats.stat_size 
+	image_yscale = 1 * yspeed * host.stats.stat_size 
 	}
 	else
 	{
-	image_xscale = 1 * yspeed * host.size 
-	image_yscale = 1 / yspeed * host.size 
+	image_xscale = 1 * yspeed * host.stats.stat_size 
+	image_yscale = 1 / yspeed * host.stats.stat_size 
 	}
 	image_angle = 0 + host.xspeed * 5
 	flatdepth = layer_get_depth(layer)

@@ -1,4 +1,4 @@
-/*
+
 liveinput = rollback_get_input();
 
 xspeed *= decel
@@ -6,7 +6,7 @@ yspeed *= decel
 
 if state = "fight"
 {
-	sprite.sprite_index = Sprite3_1
+	sprite.sprite_index = spr_plr
 	if pointer = noone
 	{
 		pointer = instance_create_layer(x, y, "Pointer", obj_pointer)
@@ -20,7 +20,7 @@ if state = "pointer"
 		instance_destroy(pointer)
 		pointer = noone
 	}
-	sprite.sprite_index = Sprite7
+	sprite.sprite_index = spr_mousepointer
 	layer_add_instance("Pointer", sprite)
 	x = liveinput.mb_x
 	y = liveinput.mb_y

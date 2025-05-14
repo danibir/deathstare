@@ -4,7 +4,7 @@ if host.liveinput != -4
 if host.state = "fight"
 {
 	var input = host.liveinput
-	if abs(host.xspeed) < host.speedstat / 2 and abs(host.yspeed) < host.speedstat / 2
+	if abs(host.xspeed) < host.stats.stat_speed / 2 and abs(host.yspeed) < host.stats.stat_speed / 2
 	host.startaccel = 2.5
 	host.startaccel -= 1/fps * 5
 
@@ -17,7 +17,7 @@ if host.state = "fight"
 		var mul = 1
 		if input.walkup and !input.walkdown or input.walkdown and !input.walkup
 			mul = 0.7
-		host.xspeed -= host.speedstat / 1.5 * host.startaccel
+		host.xspeed -= host.stats.stat_speed / 1.5 * host.startaccel
 	}
 	if (input.walkright)
 	{
@@ -25,7 +25,7 @@ if host.state = "fight"
 		var mul = 1
 		if input.walkup and !input.walkdown or input.walkdown and !input.walkup
 			mul = 0.7
-		host.xspeed += host.speedstat / 1.5 * host.startaccel
+		host.xspeed += host.stats.stat_speed/ 1.5 * host.startaccel
 	}
 	if (input.walkup)
 	{
@@ -33,7 +33,7 @@ if host.state = "fight"
 		var mul = 1
 		if input.walkleft and !input.walkright or input.walkright and !input.walkleft
 			mul = 0.7
-		host.yspeed -= host.speedstat / 1.5 * host.startaccel
+		host.yspeed -= host.stats.stat_speed / 1.5 * host.startaccel
 	}
 	if (input.walkdown)
 	{
@@ -41,17 +41,22 @@ if host.state = "fight"
 		var mul = 1
 		if input.walkleft and !input.walkright or input.walkright and !input.walkleft
 			mul = 0.7
-		host.yspeed += host.speedstat / 1.5 * host.startaccel
+		host.yspeed += host.stats.stat_speed / 1.5 * host.startaccel
 	}
-	//if input.mb_leftpress and normalattackcooldown < 0
-	//{
-	//	var bullet = instance_create_layer(host.x, host.y - host.size * 16, "Instances", obj_bullet)
-	//	bullet.thedirection = 360 - host.pointer.image_angle
-	//	bullet.damage = host.stats.strengthstat
-	//	bullet.thespeed = host.stats.shotspeedstat
-	//	bullet.range = host.stats.rangestat
-	//	normalattackcooldown = 1 / host.stats.attackspeedstat
-	//}
+	if input.mb_leftpress and normalattackcooldown < 0
+	{
+		
+		var bullet = instance_create_layer(host.x, host.y - host.stats.stat_size * 16, "Instances", obj_bullethitbox)
+		
+		bullet.thedirection = 360 - host.pointer.image_angle
+		bullet.damage = host.stats.stat_strength
+		bullet.thespeed = host.stats.stat_shotspeed
+		bullet.size = host.stats.stat_shotsize
+		bullet.range = host.stats.stat_range
+		//*/
+		
+		normalattackcooldown = 1 / host.stats.stat_attackspeed
+	}
 //*/
 }
 

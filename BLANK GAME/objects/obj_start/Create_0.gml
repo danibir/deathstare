@@ -6,7 +6,6 @@ var thedir = random_range(0, 360) * 4
 
 for (var i = 0; i < array_length(playerlist); i++)
 {
-
 	var length = min(room_width, room_height) * 0.4;   // pixels
 	var plr = playerlist[i]
 	plr.x = room_width / 2
@@ -14,4 +13,8 @@ for (var i = 0; i < array_length(playerlist); i++)
 	move_in_direction(plr, thedir, length)
 	thedir += 360 / array_length(playerlist)
 	plr.state = "fight"
+	if floor(random_range(0, 2)) = 1
+	{
+		array_push(plr.stats.items, "soapy")
+	}
 }

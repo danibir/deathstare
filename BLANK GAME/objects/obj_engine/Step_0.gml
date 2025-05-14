@@ -1,5 +1,5 @@
 if fps != 0
-global.time = 60 / fps
+global.time = 1
 else
 global.time = 0
 
@@ -20,7 +20,7 @@ if instance_exists(obj_plr) and start = true
 	button.image_yscale = 15
 	button.text = "Start!"
 	start = false
-}/*
+}
 if instance_exists(obj_plr)
 {
 	var playerlist = []

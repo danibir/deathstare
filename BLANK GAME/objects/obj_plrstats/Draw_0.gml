@@ -1,0 +1,1 @@
+draw_text(host.x, host.y, [items, stat_shotspeed])

@@ -8,11 +8,6 @@ stop = false
 
 border = 20
 
-hp = 5
-size = 1
-
-speedstat = 1
-
 xspeed = 0
 yspeed = 0
 startaccel = 1
@@ -22,11 +17,10 @@ move = false
 cameraid = obj_engine.cameraid
 obj_engine.cameraid++
 
-liveinput = noone
+liveinput = rollback_get_input();
 state = "pointer"
 pointer = noone
 
-/*
 
 stats = instance_create_layer(x, y, "Engines", obj_plrstats)
 stats.host = self

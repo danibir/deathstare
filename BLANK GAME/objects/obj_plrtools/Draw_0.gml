@@ -1,0 +1,1 @@
+draw_text(host.x, host.y - 30, normalattackcooldown)
