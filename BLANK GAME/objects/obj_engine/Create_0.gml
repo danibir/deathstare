@@ -5,6 +5,7 @@ instance_create_layer(x, y, "Engines", obj_dictionary)
 callid = 0
 cameraid = 0
 
+
 rollback_define_input({
 	walkup: ord("W"),
 	walkleft: ord("A"),

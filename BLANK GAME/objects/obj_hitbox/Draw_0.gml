@@ -1,0 +1,2 @@
+if host.hp > 0
+draw_healthbar(x - 16 * host.stats.stat_size, y + 16 * host.stats.stat_size, x + 16 * host.stats.stat_size, y + 16 * host.stats.stat_size + 8, host.hp / host.stats.stat_hp * 100, c_black, c_red, c_lime, 0, true, true)

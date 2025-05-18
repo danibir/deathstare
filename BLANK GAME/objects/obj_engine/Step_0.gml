@@ -14,11 +14,18 @@ with all
 }//*/
 if instance_exists(obj_plr) and start = true
 {
-	var button = instance_create_layer(room_width / 2, room_height / 2, "UI", obj_button)
+	var button = instance_create_layer(room_width / 2, room_height * 5/6, "UI", obj_button)
 	button.output = "start"
 	button.image_xscale = 20
-	button.image_yscale = 15
+	button.image_yscale = 7
 	button.text = "Start!"
+	
+	var colorbutton = instance_create_layer(room_width / 2, room_height / 2, "UI", obj_button)
+	colorbutton.output = "color"
+	colorbutton.image_xscale = 20
+	colorbutton.image_yscale = 15
+	colorbutton.text = "Change color!"
+	
 	start = false
 }
 if instance_exists(obj_plr)
@@ -47,6 +54,6 @@ if instance_exists(obj_plr)
 	}
 	for (var i = 0; i < array_length(depthlist); i++)
 	{
-		depthlist[i].sprite.depthindex = array_length(depthlist) - i
+		depthlist[i].sprite.depthindex = (array_length(depthlist) - i) * 15
 	}
 }

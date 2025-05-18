@@ -1,5 +1,13 @@
 if host != noone
 {
+	if host.state = "fight"
+	{
+		sprite_index = body_skin
+	}
+	if host.state = "pointer"
+	{
+		sprite_index = spr_mousepointer
+	}
 	yaxis += step
 	if yaxis < 0
 	yaxis = 0
@@ -27,4 +35,25 @@ if host != noone
 	image_angle = 0 + host.xspeed * 5
 	flatdepth = layer_get_depth(layer)
 	depth = flatdepth + depthindex
+	image_blend = host.image_blend
+	image_alpha = host.image_alpha
+	var items = host.stats.items
+	for (var i = 0; i < array_length(items); i++)
+	{
+		var item = struct_get(obj_dictionary.passiveitemstruct, host.stats.items[i])
+		var itemsprite = sprite_from_num(struct_get(item, "decor"))
+		var decortypes = ["hat", "eyes", "mouth", "body", "back"]
+		if string_copy(itemsprite, 19, 3) = "hat"
+			hat_skin = real(itemsprite)	
+		if string_copy(itemsprite, 19, 4) = "eyes"
+			eyes_skin = real(itemsprite)		
+		if string_copy(itemsprite, 19, 5) = "mouth"
+			mouth_skin = real(itemsprite)	
+		if string_copy(itemsprite, 19, 4) = "body"
+			body_skin = real(itemsprite)		
+		if string_copy(itemsprite, 19, 4) = "back"
+			back_skin = real(itemsprite)
+		
+	}
+	
 }

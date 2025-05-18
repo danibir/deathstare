@@ -35,3 +35,14 @@ stat_attackspeed += statincreases[5]
 stat_shotspeed += statincreases[6]
 stat_shotsize += statincreases[7]
 stat_range += statincreases[8]
+
+var minhp = 0.1
+if stat_hp < minhp
+	stat_hp = minhp
+var minlives = 1
+if stat_lives < minlives
+	stat_lives = minlives
+var minsize = 0.1
+if stat_size = minsize
+	stat_size = minsize
+	
