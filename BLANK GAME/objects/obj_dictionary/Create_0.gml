@@ -27,9 +27,12 @@ colordictionary = {
 	f: new colorset("Purple", 255, 0, 255)
 }
 
-function passiveitem_set(_name, _decor, _hpstat, _livesstat, _speedstat, _sizestat, _strengthstat, _attackspeedstat, _shotspeedstat, _shotsizestat, _rangestat, _special)
+function passiveitem_set(_name, _icon, _call, _description, _decor, _hpstat, _livesstat, _speedstat, _sizestat, _strengthstat, _attackspeedstat, _shotspeedstat, _shotsizestat, _rangestat, _special)
 	constructor {
 	name = _name
+	icon = real(_icon)
+	call = _call
+	description = _description
 	decor = real(_decor)
 	hpstat = _hpstat
 	livesstat = _livesstat
@@ -45,7 +48,9 @@ function passiveitem_set(_name, _decor, _hpstat, _livesstat, _speedstat, _sizest
 
 
 passiveitemstruct = {
-	soapy: new passiveitem_set("Soapy", spr_plrhat_soapy, 0, 0, 0, 0, -0.5, 0, -8, 1.5, 5, ["a_decel"]),
-	stupid: new passiveitem_set("Stupid", spr_plreyes_googlyeyes, 0, 0, 0, 0, 0, 100, -8, 0, 10, ["a_snake"])
+	bubbles: new passiveitem_set("Bubbles", real(spr_soapy), "Tastes... soapy", "Damage down\nShotspeed down",
+			spr_plrhat_soapy, 0, 0, 0, 0, -0.5, 0, -7, 1, 5, ["a_decel"]),
+	stupid: new passiveitem_set("Stupid", noone, "", "",
+			spr_plreyes_googlyeyes, 0, 0, 0, 0, 0, 100, -8, 0, 10, ["a_snake"])
 		
 }

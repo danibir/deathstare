@@ -20,6 +20,8 @@ if instance_exists(obj_plr) and start = true
 	button.image_yscale = 7
 	button.text = "Start!"
 	
+	var item = instance_create_layer(room_width / 6, room_height / 2, "UI", obj_item)
+	
 	var colorbutton = instance_create_layer(room_width / 2, room_height / 2, "UI", obj_button)
 	colorbutton.output = "color"
 	colorbutton.image_xscale = 20

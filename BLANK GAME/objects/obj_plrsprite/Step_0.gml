@@ -1,4 +1,4 @@
-if host != noone
+if host != noone or instance_exists(host)
 {
 	if host.state = "fight"
 	{
