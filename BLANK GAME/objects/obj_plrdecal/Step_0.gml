@@ -24,6 +24,7 @@ if host != noone
 		{
 			depth -= 2
 			sprite = host.eyes_skin
+			if host.host.pointer != noone
 			move_in_direction(self, 360 - host.host.pointer.image_angle, host.host.size)
 		}
 		if type = "hat"

@@ -11,6 +11,7 @@ rollback_define_input({
 	walkleft: ord("A"),
 	walkdown: ord("S"),
 	walkright: ord("D"),
+	shift: vk_shift,
 	mb_x: m_axisx,
 	mb_y: m_axisy,
 	mb_leftpress: mb_left

@@ -7,7 +7,7 @@
   "option_operagx_game_name":"Deathstare",
   "option_operagx_guid":"2920f730-1fb1-41f0-ab5d-4d841d0b1e47",
   "option_operagx_internalShareUrl":"https://gx.games/games/n9y6ii/deathstare/tracks/2a523b7e-530e-4d28-935b-daf1b4818d77/",
-  "option_operagx_interpolate_pixels":true,
+  "option_operagx_interpolate_pixels":false,
   "option_operagx_mod_editUrl":"",
   "option_operagx_mod_game_name":"BLANK GAME",
   "option_operagx_mod_guid":"",

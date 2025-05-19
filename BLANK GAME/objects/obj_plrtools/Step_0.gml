@@ -8,41 +8,56 @@ if host != noone and instance_exists(host)
 			if abs(host.xspeed) < host.stats.stat_speed / 2 and abs(host.yspeed) < host.stats.stat_speed / 2
 			host.startaccel = 2.5
 			host.startaccel -= 1/60 * 5 * global.time
-
+			
 			if host.startaccel < 1
 				host.startaccel = 1
 
+			var maxdash = 4
+			if host.liveinput.shift and host.stamina > 0
+			{
+				host.stamina -= 0.3
+				host.breath = 0
+			}
+			if host.liveinput.shift and host.stamina > 0
+			{
+				dashspeed = lerp(dashspeed, maxdash, 0.4)
+			}
+			else
+			{
+				dashspeed = lerp(dashspeed, 1, 0.4)
+			}
+			
 			if (input.walkleft)
 			{
 				host.move = true
 				var mul = 1
 				if input.walkup and !input.walkdown or input.walkdown and !input.walkup
-					mul = 0.7
-				host.xspeed -= host.stats.stat_speed / 1.5 * host.startaccel
+					mul = 0.8
+				host.xspeed -= host.stats.stat_speed / 1.5 * host.startaccel * mul * dashspeed
 			}
 			if (input.walkright)
 			{
 				host.move = true
 				var mul = 1
 				if input.walkup and !input.walkdown or input.walkdown and !input.walkup
-					mul = 0.7
-				host.xspeed += host.stats.stat_speed/ 1.5 * host.startaccel
+					mul = 0.8
+				host.xspeed += host.stats.stat_speed/ 1.5 * host.startaccel * mul * dashspeed
 			}
 			if (input.walkup)
 			{
 				host.move = true
 				var mul = 1
 				if input.walkleft and !input.walkright or input.walkright and !input.walkleft
-					mul = 0.7
-				host.yspeed -= host.stats.stat_speed / 1.5 * host.startaccel
+					mul = 0.8
+				host.yspeed -= host.stats.stat_speed / 1.5 * host.startaccel * mul * dashspeed
 			}
 			if (input.walkdown)
 			{
 				host.move = true
 				var mul = 1
 				if input.walkleft and !input.walkright or input.walkright and !input.walkleft
-					mul = 0.7
-				host.yspeed += host.stats.stat_speed / 1.5 * host.startaccel
+					mul = 0.8
+				host.yspeed += host.stats.stat_speed / 1.5 * host.startaccel * mul * dashspeed
 			}
 			if input.mb_leftpress and normalattackcooldown < 0
 			{

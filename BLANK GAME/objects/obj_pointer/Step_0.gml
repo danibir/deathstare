@@ -1,5 +1,6 @@
 x = host.x
 y = host.y - host.stats.stat_size * 16
+layer_add_instance("Pointer", self)
 image_angle = point_direction(x, y, host.liveinput.mb_x, host.liveinput.mb_y)
 depth = host.sprite.depth + 1
 

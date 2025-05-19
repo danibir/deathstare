@@ -4,5 +4,8 @@ button.visible = false
 item = "bubbles"
 sprite = noone
 
-image_xscale = 15
-image_yscale = 25
+xscale = 25
+yscale = 40
+image_xscale = xscale
+image_yscale = yscale
+decay = 0

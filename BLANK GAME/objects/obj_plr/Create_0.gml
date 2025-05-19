@@ -12,6 +12,9 @@ decel = 0.6
 move = false
 
 flicker = 5
+respawn = false
+maxrespawntimer = 5
+respawntimer =  maxrespawntimer
 
 lightencolor = [0, 0, 0]
 
@@ -22,7 +25,9 @@ liveinput = noone
 state = "pointer"
 pointer = noone
 
-
+maxstamina = 10
+stamina = maxstamina
+breath = 3
 
 stats = instance_create_layer(x, y, "Engines", obj_plrstats)
 stats.host = self

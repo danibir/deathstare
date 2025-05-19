@@ -14,5 +14,3 @@ items = []
 
 qactive = noone
 eactive = noone
-
-size = 1

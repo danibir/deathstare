@@ -14,7 +14,10 @@ else
 	image_xscale *= host.sprite_width * 2/3
 	image_yscale *= host.sprite_height / 3
 	image_alpha = host.image_alpha * defaultalpha
-	}//*/
+	}
+	if host.object_index = obj_plr and host.state = "pointer"
+		image_alpha = 0
+	//*/
 	x = host.x
 	y = host.y// + host.sprite_height / 2 //*/
 }
