@@ -15,6 +15,7 @@ flicker = 5
 respawn = false
 maxrespawntimer = 5
 respawntimer =  maxrespawntimer
+active = true
 
 lightencolor = [0, 0, 0]
 

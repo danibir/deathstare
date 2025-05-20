@@ -40,7 +40,7 @@ if host != noone or instance_exists(host)
 	var items = host.stats.items
 	for (var i = 0; i < array_length(items); i++)
 	{
-		var item = struct_get(obj_dictionary.passiveitemstruct, host.stats.items[i])
+		var item = struct_get(obj_dictionary.itemstruct, host.stats.items[i])
 		var itemsprite = sprite_from_num(struct_get(item, "decor"))
 		var decortypes = ["hat", "eyes", "mouth", "body", "back"]
 		if string_copy(itemsprite, 19, 3) = "hat"

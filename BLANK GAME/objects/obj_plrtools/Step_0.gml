@@ -75,7 +75,7 @@ if host != noone and instance_exists(host)
 				var speciallist = []
 				for (var i = 0; i < array_length(items); i++)
 				{
-					var item = struct_get(obj_dictionary.passiveitemstruct, items[i])
+					var item = struct_get(obj_dictionary.itemstruct, items[i])
 					var special = struct_get(item, "special")
 					for (var o = 0; o < array_length(special); o++)
 					{

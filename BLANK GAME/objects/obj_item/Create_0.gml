@@ -8,4 +8,5 @@ xscale = 25
 yscale = 40
 image_xscale = xscale
 image_yscale = yscale
+image_blend = c_dkgray
 decay = 0

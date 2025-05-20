@@ -21,7 +21,7 @@ rollback_define_player(obj_plr, "Instances");
 
 if not rollback_join_game()
 {
-	rollback_create_game(3, true)
+	rollback_create_game(3, false)
 }
 num = 1
 

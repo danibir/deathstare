@@ -19,7 +19,7 @@ for (var i = 0; i < array_length(statsnames); i++)
 	
 for (var a = 0; a < array_length(items); a++)
 {
-	var itemstat = struct_get(obj_dictionary.passiveitemstruct, string(items[a]))
+	var itemstat = struct_get(obj_dictionary.itemstruct, string(items[a]))
 	for (var b = 0; b < array_length(statsnames); b++)
 	{
 		//show_message([statsnames[b],struct_get(itemstat, statsnames[b])])

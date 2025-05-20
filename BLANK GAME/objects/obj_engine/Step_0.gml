@@ -1,3 +1,4 @@
+
 if fps != 0
 global.time = 1
 else
@@ -11,22 +12,15 @@ with all
 		shadow.host = self
 		array_push(global.shadowlist, self)
 	}
-}//*/
+}
+if not rollback_game_running and keyboard_check_pressed(vk_enter)
+{
+    rollback_start_game()
+}
 if instance_exists(obj_plr) and start = true
 {
-	var button = instance_create_layer(room_width / 2, room_height * 5/6, "UI", obj_button)
-	button.output = "start"
-	button.image_xscale = 20
-	button.image_yscale = 7
-	button.text = "Start!"
-	
-	var item = instance_create_layer(room_width / 6, room_height / 2, "UI", obj_item)
-	
-	var colorbutton = instance_create_layer(room_width / 2, room_height / 2, "UI", obj_button)
-	colorbutton.output = "color"
-	colorbutton.image_xscale = 20
-	colorbutton.image_yscale = 15
-	colorbutton.text = "Change color!"
+	instance_create_layer(room_width * 1.6, room_height / 2, "Limesmile", obj_limetransition)
+	obj_limetransition.next = "Start"
 	
 	start = false
 }

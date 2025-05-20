@@ -1,10 +1,12 @@
-if other.state = "pointer" and (other.liveinput.mb_leftpress)
+if ready > 1
+if other.state = "pointer" and (other.liveinput.mb_leftpress) and other.active = true
 {
-	if output = "start"
+	if not array_contains(entry, other)
+		array_push(entry, other)
+	if output = "start"// and array_length(entry) = instance_number(obj_plr)
 	{
-		instance_create_layer(x, y, "Engines", obj_fight)
-		with obj_button
-			instance_destroy()
+		obj_limetransition.next = "Fight"
+		instance_destroy()
 	}
 	if output = "color" and input = 0
 	{

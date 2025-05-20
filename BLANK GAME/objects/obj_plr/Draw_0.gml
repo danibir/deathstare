@@ -7,8 +7,6 @@ if respawn = true
 	text += "ves"
 	text += " left...\n"
 	if respawntimer > 0
-		text += "You can respawn in " + string(respawntimer) + " seconds..."
-	else
-		text += "Click to respawn!"
+		text += "Respawning in " + string(respawntimer) + " seconds!"
 	draw_text(x, y - 32, text)
 }

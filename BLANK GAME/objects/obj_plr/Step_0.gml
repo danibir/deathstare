@@ -26,9 +26,12 @@ if hp <= 0 and state = "fight"
 	if flicker <= 0
 	{
 		state = "pointer"
-		if lifecount > 1
+		if lifecount > 0
 		{
 			lifecount--
+		}
+		if lifecount > 0
+		{
 			respawn = true
 			respawntimer = maxrespawntimer
 		}
@@ -39,7 +42,7 @@ else
 	flicker = 0.5
 }
 
-
+image_blend = c_white
 if state = "fight"
 {
 	if pointer = noone
@@ -59,8 +62,9 @@ if state = "pointer"
 	layer_add_instance("Pointer", sprite)
 	x = liveinput.mb_x
 	y = liveinput.mb_y
-	
-	if respawn = true and respawntimer <= 0 and liveinput.mb_leftpress
+	if active = false
+		image_blend = c_gray
+	if respawn = true and respawntimer <= 0
 	{
 		hp = stats.stat_hp
 		state = "fight"
@@ -76,8 +80,8 @@ respawntimer -= 1 / 60 * global.time
 x += xspeed * 1 * global.time
 y += yspeed * 1 * global.time  
 
-image_xscale = size
-image_yscale = size
+image_xscale = stats.stat_size
+image_yscale = stats.stat_size
 
 if x < 0 + border
 	x = 0 + border
@@ -88,5 +92,5 @@ if y < 0 + border
 if y > room_height - border
 	y = room_height - border
 	
-	
-lightencolor = get_set_color_rgb(struct_get_names(obj_dictionary.colordictionary)[colorid])
+var colorname = struct_get_names(obj_dictionary.colordictionary)[colorid]
+lightencolor = get_set_color_rgb(colorname)

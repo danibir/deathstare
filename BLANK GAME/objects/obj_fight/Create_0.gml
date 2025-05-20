@@ -9,7 +9,8 @@ for (var i = 0; i < instance_number(obj_plr); i++)
 	move_in_direction(plr, thedir, length)
 	thedir += 360 / instance_number(obj_plr)
 	plr.state = "fight"
-	
+	plr.active = true
 	plr.lifecount = plr.stats.stat_lives
 	plr.hp = plr.stats.stat_hp
 }
+count = 0
