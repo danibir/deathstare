@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_box",
-    "path":"sprites/spr_box/spr_box.yy",
+    "name":"spr_other_box",
+    "path":"sprites/spr_other_box/spr_other_box.yy",
   },
   "spriteMaskId":null,
   "tags":[

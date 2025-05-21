@@ -1,12 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_shadow",
+  "%Name":"obj_bullet_bullethitbox",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_plr_hitbox","path":"objects/obj_plr_hitbox/obj_plr_hitbox.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_shadow",
+  "name":"obj_bullet_bullethitbox",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_other_shadow",
-    "path":"sprites/spr_other_shadow/spr_other_shadow.yy",
+    "name":"spr_bullet_bullet",
+    "path":"sprites/spr_bullet_bullet/spr_bullet_bullet.yy",
   },
   "spriteMaskId":null,
   "visible":true,

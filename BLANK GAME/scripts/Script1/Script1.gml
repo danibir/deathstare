@@ -14,14 +14,14 @@ function get_set_color_rgb (color_name)
 {
 	var colorrgblist = []
 	
-	array_push(colorrgblist, struct_get(struct_get(obj_dictionary.colordictionary, color_name), "r"))
-	if struct_get(struct_get(obj_dictionary.colordictionary, color_name), "name") = "yellow"
+	array_push(colorrgblist, struct_get(struct_get(obj_eng_dictionary.colordictionary, color_name), "r"))
+	if struct_get(struct_get(obj_eng_dictionary.colordictionary, color_name), "name") = "yellow"
 		show_message("r")
-	array_push(colorrgblist, struct_get(struct_get(obj_dictionary.colordictionary, color_name), "g"))
-	if struct_get(struct_get(obj_dictionary.colordictionary, color_name), "name") = "yellow"
+	array_push(colorrgblist, struct_get(struct_get(obj_eng_dictionary.colordictionary, color_name), "g"))
+	if struct_get(struct_get(obj_eng_dictionary.colordictionary, color_name), "name") = "yellow"
 		show_message("g")
-	array_push(colorrgblist, struct_get(struct_get(obj_dictionary.colordictionary, color_name), "b"))
-	if struct_get(struct_get(obj_dictionary.colordictionary, color_name), "name") = "yellow"
+	array_push(colorrgblist, struct_get(struct_get(obj_eng_dictionary.colordictionary, color_name), "b"))
+	if struct_get(struct_get(obj_eng_dictionary.colordictionary, color_name), "name") = "yellow"
 		show_message("b")
 
 	

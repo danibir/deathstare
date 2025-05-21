@@ -25,6 +25,13 @@ if hp <= 0 and state = "fight"
 		image_alpha = 0
 	if flicker <= 0
 	{
+		for (var i = 0; i < stats.stat_hp * 5; i++)
+		{
+			var bits = instance_create_layer(x, y, "Floor", obj_particle_bits)
+			bits.image_blend = c_yellow
+			bits.myspeed = random_range(0, sqr(size * 4))
+			bits.decel = 0.005
+		}
 		state = "pointer"
 		if lifecount > 0
 		{
@@ -43,11 +50,11 @@ else
 }
 
 image_blend = c_white
-if state = "fight"
+if state = "fighte"
 {
 	if pointer = noone
 	{
-		pointer = instance_create_layer(x, y, "Pointer", obj_pointer)
+		pointer = instance_create_layer(x, y, "Pointer", obj_plr_pointer)
 		pointer.host = self
 	}
 	layer_add_instance("Instances", sprite)
@@ -68,9 +75,9 @@ if state = "pointer"
 	{
 		hp = stats.stat_hp
 		state = "fight"
-		hitbox = instance_create_layer(x, y, "Instances", obj_hitbox)
+		hitbox = instance_create_layer(x, y, "Instances", obj_plr_hitbox)
 		hitbox.host = self
-		tools = instance_create_layer(x, y, "Instances", obj_plrtools)
+		tools = instance_create_layer(x, y, "Instances", obj_plr_tools)
 		tools.host = self
 		respawn = false
 	}
@@ -92,5 +99,5 @@ if y < 0 + border
 if y > room_height - border
 	y = room_height - border
 	
-var colorname = struct_get_names(obj_dictionary.colordictionary)[colorid]
+var colorname = struct_get_names(obj_eng_dictionary.colordictionary)[colorid]
 lightencolor = get_set_color_rgb(colorname)

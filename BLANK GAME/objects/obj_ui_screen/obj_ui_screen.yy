@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_shadow",
+  "%Name":"obj_ui_screen",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_shadow",
+  "name":"obj_ui_screen",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_other_shadow",
-    "path":"sprites/spr_other_shadow/spr_other_shadow.yy",
+    "name":"spr_other_pixel",
+    "path":"sprites/spr_other_pixel/spr_other_pixel.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

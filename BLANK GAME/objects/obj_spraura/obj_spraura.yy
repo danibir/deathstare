@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_smooth",
-    "path":"sprites/spr_smooth/spr_smooth.yy",
+    "name":"spr_plr_aura",
+    "path":"sprites/spr_plr_aura/spr_plr_aura.yy",
   },
   "spriteMaskId":null,
   "visible":true,
